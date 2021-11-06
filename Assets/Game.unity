@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 301018779}
   - component: {fileID: 301018780}
   - component: {fileID: 301018781}
+  - component: {fileID: 301018782}
   m_Layer: 0
   m_Name: Leg_Left
   m_TagString: Untagged
@@ -463,6 +464,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &301018782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301018776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751b621f1b31eca4aada6b1b79a242b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 300
 --- !u!1 &500908467
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,9 +882,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580059259}
+  - component: {fileID: 1580059264}
   - component: {fileID: 1580059260}
   - component: {fileID: 1580059261}
   - component: {fileID: 1580059262}
+  - component: {fileID: 1580059263}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -981,7 +998,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 4
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -989,6 +1006,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1580059263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580059258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751b621f1b31eca4aada6b1b79a242b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 300
+--- !u!114 &1580059264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580059258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1be73d2dfcd30439dd583aee6a29e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  playerSpeed: 42
 --- !u!1 &1946194766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1047,7 @@ GameObject:
   - component: {fileID: 1946194769}
   - component: {fileID: 1946194770}
   - component: {fileID: 1946194771}
+  - component: {fileID: 1946194772}
   m_Layer: 0
   m_Name: Leg_Right
   m_TagString: Untagged
@@ -1145,6 +1191,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &1946194772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946194766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751b621f1b31eca4aada6b1b79a242b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRotation: 0
+  force: 300
 --- !u!1 &1991272812
 GameObject:
   m_ObjectHideFlags: 0
