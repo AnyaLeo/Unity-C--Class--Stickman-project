@@ -20,9 +20,14 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // calculations
-        Vector3 difference = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        if (Input.GetKey(mouseButton))
+        {
+            // calculations
+            Vector3 difference = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        // rotate our arm in the direction of the mouse
+            // rotate our arm in the direction of the mouse
+            rb.MoveRotation(Mathf.LerpAngle(rb.rotation, rotationZ, moveSpeed * Time.deltaTime));
+        }
     }
 }
