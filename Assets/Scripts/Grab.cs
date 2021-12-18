@@ -9,6 +9,12 @@ public class Grab : MonoBehaviour
     private bool canGrabObjects;
     private FixedJoint2D joint;
 
+    private void Start()
+    {
+        joint = gameObject.AddComponent<FixedJoint2D>();
+        joint.enabled = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +25,20 @@ public class Grab : MonoBehaviour
         else
         {
             canGrabObjects = false;
+            joint.enabled = false;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (canGrabObjects)
+        {
+            Rigidbody2D objectRb = collision.transform.GetComponent<Rigidbody2D>();
+            if (objectRb != null)
+            {
+                joint.enabled = true;
+                joint.connectedBody = objectRb;
+            }
         }
     }
 }
