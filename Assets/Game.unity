@@ -456,8 +456,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.31636688, y: -0.88808966}
+  m_Anchor: {x: 0, y: 0.46}
+  m_ConnectedAnchor: {x: -0.31636688, y: -0.51205754}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1465,8 +1465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  playerSpeed: 42
-  jumpForce: 40
+  playerSpeed: 30
+  jumpForce: 600
   distanceToGround: 0.2
   playerGround: {fileID: 1629977718}
 --- !u!1 &1629977717
@@ -1646,8 +1646,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.30869737, y: -0.88808966}
+  m_Anchor: {x: 0, y: 0.48}
+  m_ConnectedAnchor: {x: 0.30869737, y: -0.49570835}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
