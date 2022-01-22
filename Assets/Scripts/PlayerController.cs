@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public Transform playerGround;
     private Animator anim;
 
+    public float maxSpeed = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,17 +29,25 @@ public class PlayerController : MonoBehaviour
         // then go left
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.AddForce(Vector2.left * playerSpeed);
+            bool isPlayerBelowMaxSpeed = Mathf.Abs(rb.velocity.x) <= maxSpeed;
+            if(isPlayerBelowMaxSpeed)
+            {
+                rb.AddForce(Vector2.left * playerSpeed); 
+            }
 
             // Include the EXACT name of the state you want to play
             // the state is the box you see in the animator
-            anim.Play("Walk");
+            anim.Play("WalkBack");
         }
         // if we press D OR arrow key right
         // then go right 
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            rb.AddForce(Vector2.right * playerSpeed);
+            bool isPlayerBelowMaxSpeed = Mathf.Abs(rb.velocity.x) <= maxSpeed;
+            if (isPlayerBelowMaxSpeed)
+            {
+                rb.AddForce(Vector2.right * playerSpeed);
+            }
 
             anim.Play("Walk");
         }
